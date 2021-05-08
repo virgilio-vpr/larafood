@@ -7,6 +7,12 @@ Route::prefix('admin')
         ->group(function() {
         
 
+           /**
+         * Routes Permission
+         */
+        Route::any('permissions/search', 'ACL\PermissionController@search')->name('permissions.search');
+        Route::resource('permissions', 'ACL\PermissionController');
+
         /**
          * Routes Profiles
          */
