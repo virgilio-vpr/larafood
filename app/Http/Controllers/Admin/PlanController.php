@@ -63,7 +63,7 @@ class PlanController extends Controller
         if ($plan->details->count() > 0) {
             return redirect()
                         ->back()
-                        ->with('error', 'Existem detalhes vinculados a este plano, portando não pode deletar.');
+                        ->with('error', 'Existem detalhes vinculados a este plano, portando não pode deletar');
         }
 
         $plan->delete();
