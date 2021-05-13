@@ -17,10 +17,10 @@ class CreatePermissionProfileTable extends Migration
             $table->bigIncrements('id');
             $table->unsignedBigInteger('permission_id');
             $table->unsignedBigInteger('profile_id');
-    
+
             $table->foreign('permission_id')
-                        ->references('id')
-                        ->on('permissons')
+                        ->references('id')                      
+                        ->on('permissions')
                         ->onDelete('cascade');
 
             $table->foreign('profile_id')
@@ -28,9 +28,11 @@ class CreatePermissionProfileTable extends Migration
                         ->on('profiles')
                         ->onDelete('cascade');
         });
+
+        
     }
 
-    /**
+    /** 
      * Reverse the migrations.
      *
      * @return void
