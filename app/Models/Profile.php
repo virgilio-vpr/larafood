@@ -22,6 +22,14 @@ class Profile extends Model
     }
 
     /**
+     * Relationship - Get Plans
+     */
+    public function plans()
+    {
+        return $this->belongsToMany(Plan::class);
+    }
+
+    /**
      * Pemissions not linked with this profile
      */
 
