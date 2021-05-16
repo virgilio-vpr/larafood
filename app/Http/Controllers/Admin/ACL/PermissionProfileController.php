@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\Permission;
 use App\Models\Profile;
 use Illuminate\Http\Request;
-use PhpParser\Node\Expr\FuncCall;
 
 class PermissionProfileController extends Controller
 {

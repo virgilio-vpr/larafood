@@ -11,7 +11,7 @@ class Permission extends Model
 
     protected $fillable = ['name', 'description'];
 
-        /**
+    /**
      * Get Profiles
      */
 
@@ -19,4 +19,5 @@ class Permission extends Model
     {
         return $this->belongsToMany(Profile::class);
     }
+    
 }
