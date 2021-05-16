@@ -9,10 +9,14 @@
         <li class="breadcrumb-item"><a href="{{ route('plans.show', $plan->url) }}">{{ $plan->name }}</a></li>
         <li class="breadcrumb-item active"><a href="{{ route('details.plan.index', $plan->url) }}">Detalhes</a></li>
     </ol>
-    <h1>Detalhes do Plano {{ $plan->name }} <a href="{{ route('details.plan.create', $plan->url) }}" class="btn btn-dark ml-3"><i class="fas fa-plus-square"></i></i>&nbsp;&nbsp;ADD</a></h1>
+    <h1>Detalhes do Plano {{ $plan->name }}
+        <a href="{{ route('details.plan.create', $plan->url) }}" class="btn btn-dark ml-3">
+            <i class="fas fa-plus-square"></i>&nbsp;&nbsp;ADD
+        </a>
+    </h1>
 @stop
 
-@section('content')
+@section('content') 
     <div class="card">
         <div class="card-body">
 
