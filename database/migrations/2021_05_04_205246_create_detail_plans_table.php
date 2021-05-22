@@ -13,7 +13,7 @@ class CreateDetailPlansTable extends Migration
      */
     public function up()
     {
-        Schema::create('detail_plan', function (Blueprint $table) {
+        Schema::create('details_plan', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('plan_id');
             $table->string('name');
@@ -33,6 +33,6 @@ class CreateDetailPlansTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('detail_plan');
+        Schema::dropIfExists('details_plan');
     }
 }

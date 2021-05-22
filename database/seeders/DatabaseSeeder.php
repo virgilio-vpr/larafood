@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Tenant;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -12,7 +13,10 @@ class DatabaseSeeder extends Seeder
      * @return void
      */
     public function run()
-    {
-        $this->call(UserTableSeeder::class);
+    {   $this->call([
+            PlansTableSeeder::class,
+            TenantsTableSeeder::class,
+            UserTableSeeder::class,
+        ]);
     }
 }

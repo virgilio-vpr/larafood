@@ -2,11 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Plan;
 use App\Models\Tenant;
-use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class UserTableSeeder extends Seeder
+class TenantsTableSeeder extends Seeder
 {
     /**
      * Run the database seeds.
@@ -15,12 +15,13 @@ class UserTableSeeder extends Seeder
      */
     public function run()
     {   
-        $tenant = Tenant::first();
+        $plan = Plan::first();
 
-        $tenant->users()->create([
-            'name' => 'Virgilio Rosa',
+        $plan->tenants()->create([
+            'cnpj'  => '23882706000120',
+            'name'  => 'EProcjet',
+            'url'   => 'eprocjet',
             'email' => 'eprocjet@gmail.com',
-            'password' => bcrypt('123456'),
         ]);
     }
 }
