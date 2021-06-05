@@ -3,7 +3,6 @@
 namespace App\Services;
 
 use App\Models\Plan;
-use Illuminate\Support\Str;
 
 Class TenantService
 {
@@ -13,9 +12,9 @@ Class TenantService
     {
         $this->plan = $plan;
         $this->data = $data;
-
+        
         $tenant = $this->storeTenant();
-
+        
         $user = $this->storeUser($tenant);
     
         return $user;
@@ -24,11 +23,11 @@ Class TenantService
     public function storeTenant(){
 
         $data = $this->data;
-
+     
+        //dd($this->plan);
         return $this->plan->tenants()->create([
             'cnpj' => $data['cnpj'],
             'name' => $data['empresa'],
-            'url'  => Str::kebab($data['empresa']),
             'email' => $data['email'],
 
             'subscription' => now(),

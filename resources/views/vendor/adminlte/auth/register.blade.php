@@ -17,8 +17,10 @@
     @endif
 
 @section('auth_body')
-    <form action="{{ route('register') }}" method="post">
-        {{ csrf_field() }}
+    <form action="{{ route('register') }}" method="POST">
+        
+        @csrf
+        {{-- {{ csrf_field() }} --}}
 
         {{-- Name company --}}
         <div class="input-group mb-3">

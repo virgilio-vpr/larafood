@@ -21,7 +21,7 @@ class TenantsTableSeeder extends Seeder
             'cnpj'  => '23882706000120',
             'name'  => 'EProcjet',
             'url'   => 'eprocjet',
-            'email' => 'eprocjet@gmail.com',
+            'email' => 'virgilio.vpr@gmail.com',
         ]);
     }
 }

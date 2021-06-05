@@ -19,7 +19,7 @@ class UserTableSeeder extends Seeder
 
         $tenant->users()->create([
             'name' => 'Virgilio Rosa',
-            'email' => 'eprocjet@gmail.com',
+            'email' => 'virgilio.vpr@gmail.com',
             'password' => bcrypt('123456'),
         ]);
     }
