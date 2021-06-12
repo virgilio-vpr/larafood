@@ -15,7 +15,7 @@ class PlanObserver
     public function creating(Plan $plan)
     {
         $plan->url = Str::kebab($plan->name);
-        $plan->price= preg_replace('/(?<=\d),+(?=\d)/', '.', $plan->price);
+        $plan->price= preg_replace('/(?<=\d),+(?=\d)/', '.', $plan->price); // Essa linha foi adicionada por minha conta
     }
 
     /**
@@ -27,6 +27,6 @@ class PlanObserver
     public function updating(Plan $plan)
     {
         $plan->url = Str::kebab($plan->name);
-        $plan->price= preg_replace('/(?<=\d),+(?=\d)/', '.', $plan->price);
+        $plan->price= preg_replace('/(?<=\d),+(?=\d)/', '.', $plan->price); // Essa linha foi adicionada por minha conta
     }
 }
